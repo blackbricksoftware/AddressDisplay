@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Contact Address Display</name>
+	 <version>0.0.1</version>
+    <description>Contact Address Display ver. 0.0.1 for Joomla 3.1.x. Created by Black Brick Software LLC.</description>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Black Brick Software LLC</author>
+    <authorEmail>david@blackbricksoftware.com</authorEmail>
+    <authorUrl>http://blackbricksoftware.com</authorUrl>
+    <copyright>Copyright © 2013-2013 Black Brick Software LLC. All rights reserved.</copyright>
+    <creationDate>5 July 2013</creationDate>
+	<files>
+		<folder>tmpl</folder>
+		<filename module="mod_addressdisplay">mod_addressdisplay.php</filename>z
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_addressdisplay.xml</filename>
+	</files>
+	<languages />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="contact_id" type="text" default="" label="Contact Id" description="" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
